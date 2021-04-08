@@ -8,26 +8,40 @@
 
     <style>
         body {
-            font-size: 110px;
+            font-size: 50px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
-            text-shadow: 1.5px 1.5px black;
-            color: #fff;
-            background-color: darkgreen;
         }
     </style>
     <title>Calculos</title>
 
     <script type="text/javascript">
-        var num1 = prompt('Digite um número:');
-        //var operador = prompt('Digite um operador para realizar o cálculo ex: + ,- ,* ,/ ');
-        //var num2 = prompt('Digite outro número:');
+        var num1 = prompt('Digite um valor para a operação:');
+        var num2 = prompt('Digite outro valor para a operação:');
 
-        if (parseFloat(num1) == [a - z]) {
-            document.write('Inválido');
-        } else {
-            document.write('Válido')
-        }
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        // Operação de soma
+        document.write('A soma entre ' + num1 + ' e ' + num2 + ' é ' + (num1 + num2) + '<br />');
+
+        // Operação de subtração
+        document.write('A subtração entre ' + num1 + ' e ' + num2 + ' é ' + (num1 - num2) + '<br />');
+
+        // Operação de divisão
+        document.write('A divisão entre ' + num1 + ' e ' + num2 + ' é ' + (num1 / num2) + '<br />');
+
+        // Operação de multiplicação
+        document.write('A multiplicação entre ' + num1 + ' e ' + num2 + ' é ' + (num1 * num2) + '<br />');
+
+        // Operação de resto
+        document.write('A resto entre ' + num1 + ' e ' + num2 + ' é ' + (num1 % num2) + '<br />');
+
+        // Operação de encremento
+        document.write('A operação de encremento do número ' + num1 + ' é ' + (++num1) + '<br />');
+
+        // Operação de decremento
+        document.write('A operação de decremento do número ' + num1 + ' é ' + (--num1) + '<br />');
     </script>
 
 </head>
