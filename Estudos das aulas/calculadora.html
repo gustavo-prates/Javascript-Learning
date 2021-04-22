@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Calculadora</title>
+
+    <!-- bootstrap - link cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        function Calcular() {
+            var operacao = document.getElementById('operacao').value;
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            var resultado = document.getElementById('resultado').value = resultado;
+
+            n1 = parseFloat(n1);
+            n1 = parseFloat(n2);
+
+            if (n1 == '' || n1 == null) {
+                alert('Digite um número válido no campo 1');
+            }
+
+            if (n2 == '' || n2 == null) {
+                alert('Digite um número válido no campo 2');
+            }
+
+            if (operacao == '' || operacao == null) {
+                alert('Por favor, selecione uma operação matemática para seguir com o cálculo');
+            }
+
+            if (operacao == '1') {
+                resultado = (n1 = parseFloat(n1)) - (n2 = parseFloat(n2));
+            }
+            if (operacao == '2') {
+                resultado = (n1 = parseFloat(n1)) + (n2 = parseFloat(n2));
+            }
+            if (operacao == '3') {
+                resultado = (n1 = parseFloat(n1)) * (n2 = parseFloat(n2));
+            }
+            if (operacao == '4') {
+                resultado = (n1 = parseFloat(n1)) / (n2 = parseFloat(n2));
+            }
+            document.getElementById('resultado').value = resultado;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>CALCULADORA</h1>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4">
+                <input id="n1" type="text" class="form-control" placeholder="Digite um número" />
+            </div>
+
+            <div class="col-md-4">
+                <select id="operacao" class="form-control">
+						<option value="">--Selecione uma operação</option>
+						<option value="1">Subtração</option>
+						<option value="2">Adição</option>
+						<option value="3">Multiplicação</option>
+						<option value="4">Divisão</option>
+					</select>
+            </div>
+
+            <div class="col-md-4">
+                <input id="n2" type="text" class="form-control" placeholder="Digite um número" />
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <button onclick="Calcular()" type="button" class="btn btn-lg btn-primary pull-right">Calcular</button>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="well">
+            Resultado: <input id="resultado" type="text" class="form-control" readonly/>
+        </div>
+    </div>
+</body>
+
+</html>
