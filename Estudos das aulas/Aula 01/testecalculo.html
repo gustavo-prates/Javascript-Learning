@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,69 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <link href='https://css.gg/backspace.css' rel='stylesheet'>
-    <style type="text/css">
-        body {
-            background-color: #ccc;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 18px;
-        }
-        
-        .calculadora {
-            border-radius: 14px;
-            box-shadow: 2px 2px rgb(136, 129, 129);
-            background-color: #fff;
-            width: 130px;
-            border: 1px solid rgb(67, 62, 62);
-            margin: auto;
-            padding: 5px;
-        }
-        
-        h3 {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        
-        input {
-            margin: 0;
-            padding: 5px;
-            width: 110px;
-        }
-        
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-        
-        button {
-            width: 100%;
-            font-weight: 900;
-        }
-        
-        i {
-            padding: 0;
-            margin-left: 3px;
-        }
-        
-        .igual {
-            height: 50px;
-        }
-        
-        .btn-bkspace {
-            height: 25px;
-        }
-    </style>
-    <script type="text/javascript">
-        function insert(num) {
-            var numero = document.getElementById('resultado').value;
-            document.getElementById('resultado').value = numero + num;
-        }
-
-        function clean() {
-            document.getElementById('resultado').value = "";
-        }
-    </script>
+    <link rel="stylesheet" href="mycss/styke.css">
+    <script src="myjs/script.js"></script>
 </head>
 
 <body>
@@ -78,7 +17,7 @@
         <table align="center">
             <tr>
                 <td colspan="4">
-                    <input id="resultado"></input>
+                    <input autofocus id="resultado"></input>
                 </td>
             </tr>
             <tr>
@@ -86,13 +25,13 @@
                     <button onclick="clean()">C</button>
                 </td>
                 <td>
-                    <button class="btn-bkspace " onclick="insert( '<') "><i class="gg-backspace "></i></i></button>
+                    <button class="btn-bkspace " onclick="back()"><i class="gg-backspace "></i></i></button>
                 </td>
                 <td>
-                    <button onclick="insert( '&divide;') ">&divide;</button>
+                    <button onclick="insert( '/') ">&divide;</button>
                 </td>
                 <td>
-                    <button onclick="insert( 'X') ">x</button>
+                    <button onclick="insert( '*') ">x</button>
                 </td>
             </tr>
             <tr>
@@ -134,7 +73,7 @@
                     <button onclick="insert( '3') ">3</button>
                 </td>
                 <td rowspan="2 ">
-                    <button onclick="insert( '=') " class="igual ">=</button>
+                    <button onclick="calcular()" class="igual ">=</button>
                 </td>
             </tr>
             <tr>
@@ -143,6 +82,9 @@
             </tr>
         </table>
     </div>
+    <footer>
+        <p>Desenvolvido por Gustavo Prates</p>
+    </footer>
 
 </body>
 
